@@ -1,0 +1,33 @@
+package examen1;
+import java.util.Scanner;
+public class estaturas {
+	static Scanner sc=new Scanner(System.in);
+	static int estatura;
+	static int max=0;
+	static int min=0;
+	static int contador=0;
+	static int suma;
+	static int media;
+	public static int mediaAlumnos(int contador, int estatura) {
+		media=suma/contador;
+		return media;
+		
+	}
+	public static void main(String[] args) {
+		
+		System.out.println("Introduzca estaturas de los alumnos");
+		
+		while(contador!=20) {
+			estatura=sc.nextInt();
+			suma+=estatura;
+			contador++;
+			if(estatura>max) {
+				max=estatura;
+			}else if(estatura<min) {
+				min=estatura;
+			}
+		}
+		System.out.println("La media de estaturas es= "+estaturas.mediaAlumnos(contador, estatura));
+	}
+
+}
